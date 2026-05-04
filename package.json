@@ -1,0 +1,35 @@
+{
+  "name": "@openagp/sdk",
+  "version": "0.0.0",
+  "description": "Reference TypeScript SDK for the Agent Governance Protocol (AGP)",
+  "license": "Apache-2.0",
+  "homepage": "https://openagp.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openagp/sdk-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openagp/sdk-typescript/issues"
+  },
+  "keywords": [
+    "agp",
+    "agent-governance",
+    "openagp",
+    "protocol"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo 'No tests yet — Phase 1 scaffold' && exit 0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ]
+}
