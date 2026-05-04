@@ -21,7 +21,14 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepublishOnly": "tsc",
     "test": "echo 'No tests yet — Phase 1 scaffold' && exit 0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
   },
   "engines": {
     "node": ">=20"
