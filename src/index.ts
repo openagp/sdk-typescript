@@ -34,4 +34,4 @@ export {
   evaluate,
 } from "./policy.js";
 
-export const version = "0.0.0";
+export const version = "0.0.1";
