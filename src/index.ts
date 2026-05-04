@@ -27,5 +27,11 @@ export {
   sign,
   verify,
 } from "./events.js";
+export {
+  type Decision,
+  PolicyEvaluationError,
+  decisionToEventPolicyBlock,
+  evaluate,
+} from "./policy.js";
 
 export const version = "0.0.0";
