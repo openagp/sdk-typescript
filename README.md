@@ -83,14 +83,34 @@ The SDK ships a bundled copy of every AGP JSON Schema under `src/_schemas/`. The
 scripts/sync-schemas.sh
 ```
 
-## Tests
+## Development
+
+Clone alongside `openagp/spec` (tests load fixtures and test vectors from a sibling checkout — CI clones both repos automatically):
 
 ```bash
+git clone https://github.com/openagp/spec
+git clone https://github.com/openagp/sdk-typescript
+cd sdk-typescript
 npm install
-npm test
 ```
 
-Tests load fixtures and test vectors from a sibling checkout of `openagp/spec`. CI clones both repos automatically.
+Then:
+
+```bash
+npm test                 # vitest, including cross-language vectors
+npm run build            # ESM + CJS dual output
+scripts/sync-schemas.sh  # pull canonical schemas from ../spec/schemas/
+```
+
+Bundled schemas under `src/_schemas/` must stay in sync with `../spec/schemas/` — CI fails if they drift. Run `scripts/sync-schemas.sh` after pulling spec changes.
+
+For cross-language sanity, also run the conformance suite locally:
+
+```bash
+cd ../cts && make vectors    # builds agp-cts + runs embedded test vectors
+```
+
+See [CONTRIBUTING.md](https://github.com/openagp/.github/blob/main/CONTRIBUTING.md) at the org level for DCO sign-off and PR conventions, and [SUPPORT.md](https://github.com/openagp/.github/blob/main/SUPPORT.md) for where to ask questions or file bugs.
 
 ## Status
 
