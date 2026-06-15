@@ -29,7 +29,8 @@ export type MessageKind =
   | "policy"
   | "decision-request"
   | "decision-response"
-  | "discovery";
+  | "discovery"
+  | "actor";
 
 const SCHEMA_NAMES = [
   "common.json",
@@ -38,6 +39,7 @@ const SCHEMA_NAMES = [
   "decision-request.json",
   "decision-response.json",
   "discovery.json",
+  "actor.json",
 ] as const;
 
 function loadBundled(name: string): Record<string, unknown> {
