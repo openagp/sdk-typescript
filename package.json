@@ -1,6 +1,6 @@
 {
   "name": "@openagp/sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Reference TypeScript SDK for the Agent Governance Protocol (AGP) — vendor-neutral standard for AI agent governance.",
   "license": "Apache-2.0",
   "homepage": "https://openagp.io",
